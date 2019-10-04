@@ -1,9 +1,9 @@
-# .bash_profile settings put into .bashrc to ensure loading
 shopt -s checkwinsize
 shopt -s histappend
 
 source ~/bin/git-completion.bash
 source ~/bin/git-prompt.sh
+source ~/tokens
 
 export CLICOLOR=1
 export EDITOR='vim'
@@ -13,6 +13,7 @@ export HISTSIZE=10000
 export LESS=' -R '
 export PS1='[\w$(__git_ps1 " (%s)")]\$ '
 
+# Keyboard behavior
 bind "TAB:menu-complete"
 bind '"\e[Z": menu-complete-backward'
 bind "set show-all-if-ambiguous on"
