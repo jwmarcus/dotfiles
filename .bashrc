@@ -49,6 +49,6 @@ export PATH="$PATH:$HOME/.rbenv/bin"
 eval "$(rbenv init -)"
 
 # -- Gradle / Java Manager --
-export SDKMAN_DIR="/home/event-horizon/.sdkman"
+export SDKMAN_DIR="$HOME/.sdkman"
 source "$SDKMAN_DIR/bin/sdkman-init.sh"
 
