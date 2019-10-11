@@ -11,7 +11,7 @@ export VISUAL='vim'
 export HISTFILESIZE=10000
 export HISTSIZE=10000
 export LESS=' -R '
-export PS1='[\w$(__git_ps1 " (%s)")]\$ '
+export PS1='\u@\h [\w$(__git_ps1 " (%s)")]\$ '
 
 # Keyboard behavior
 bind "TAB:menu-complete"
