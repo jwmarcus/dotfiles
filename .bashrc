@@ -40,7 +40,7 @@ export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 # -- Python setup --
 alias pys="source env/bin/activate"
 alias pyd="deactivate"
-PYTHONDONTWRITEBYTECODE=1
+export PYTHONDONTWRITEBYTECODE=1
 
 # -- Go setup --
 export PATH="$PATH:/usr/local/go/bin"
