@@ -7,6 +7,9 @@ source $ZSH/oh-my-zsh.sh
 # Personal scripts
 export PATH="$PATH:$HOME/dev/bin/scripts"
 
+# Tokens
+source $HOME/tokens
+
 # -- Node doesn't need sudo for global packages like yarn --
 export NPM_PACKAGES="/home/event-horizon/.npm-packages"
 export NODE_PATH="$NPM_PACKAGES/lib/node_modules${NODE_PATH:+:$NODE_PATH}"
