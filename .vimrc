@@ -10,13 +10,13 @@ set number
 set history=1000
 set visualbell
 set confirm
+set autoread
+set clipboard=unnamedplus
 
 nnoremap <Tab> >>_
 nnoremap <S-Tab> <<_
 inoremap <S-Tab> <C-D>
-inoremap jk <esc>
-
+inoremap <Tab> <Tab>
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
-vnoremap jk <esc>  
 
