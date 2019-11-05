@@ -7,6 +7,9 @@ source $ZSH/oh-my-zsh.sh
 # Personal scripts
 export PATH="$PATH:$HOME/dev/bin/scripts"
 
+# Aliases
+alias xclip="xclip -selection c"
+
 # Tokens
 source $HOME/tokens
 
