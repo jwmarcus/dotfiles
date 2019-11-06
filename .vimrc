@@ -35,14 +35,17 @@ nnoremap <C-t> :ter++close<CR>
 
 
 " Ctrl-S saves
-nnoremap <C-S> :update<CR>
-vnoremap <C-S> <C-C>:update<CR>
-inoremap <C-S> <C-O>:update<CR>
+" TODO: Need to fix the <C-S> freezes Vim thing...
+" nnoremap <C-S> :update<CR>
+" vnoremap <C-S> <C-C>:update<CR>
+" inoremap <C-S> <C-O>:update<CR>
 
 " Editor options
 set mouse=a
 set number
 set history=1000
+" -- Tell `screen` to use darkmode syntax highlights
+set background=dark
 " set visualbell
 
 " Turn on "detection", "plugin" and "indent"
