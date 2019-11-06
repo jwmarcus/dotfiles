@@ -30,6 +30,9 @@ nnoremap <C-W>\| :vnew<CR>
 " -- Sane defaults for new splits
 set splitbelow
 set splitright
+" -- Sane defaults for terminals spun up
+nnoremap <C-t> :ter++close<CR>
+
 
 " Ctrl-S saves
 nnoremap <C-S> :update<CR>
@@ -40,7 +43,7 @@ inoremap <C-S> <C-O>:update<CR>
 set mouse=a
 set number
 set history=1000
-set visualbell
+" set visualbell
 
 " Turn on "detection", "plugin" and "indent"
 filetype plugin indent on
