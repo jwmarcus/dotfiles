@@ -18,6 +18,8 @@ nnoremap gn :bn<CR>
 nnoremap gl :ls<CR>
 " -- List all possible buffers with "gb" and accept a new buffer argument [1]
 nnoremap gb :ls<CR>:b
+" -- Close buffer but don't close window
+nnoremap <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
 
 " Window and tab management
 nnoremap <C-Down> <C-W><C-J>
