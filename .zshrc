@@ -9,6 +9,7 @@ export PATH="$PATH:$HOME/dev/bin/scripts"
 
 # Aliases
 alias xclip="xclip -selection c"
+alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y"
 
 # Tokens
 source $HOME/tokens
@@ -33,6 +34,6 @@ export PATH="$PATH:$HOME/.rbenv/bin"
 eval "$(rbenv init -)"
 
 # -- Gradle / Java Manager --
+# -- Usage: sdk install (scala|maven|java|sbt|gradle)
 export SDKMAN_DIR="$HOME/.sdkman"
 source "$SDKMAN_DIR/bin/sdkman-init.sh"
-
