@@ -38,3 +38,6 @@ eval "$(rbenv init -)"
 # -- Usage: sdk install (scala|maven|java|sbt|gradle)
 export SDKMAN_DIR="$HOME/.sdkman"
 source "$SDKMAN_DIR/bin/sdkman-init.sh"
+
+# -- Rust Manager --
+export PATH="$HOME/.cargo/bin:$PATH"
