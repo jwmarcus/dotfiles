@@ -15,7 +15,7 @@ alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y"
 source $HOME/tokens
 
 # -- Node doesn't need sudo for global packages like yarn --
-export NPM_PACKAGES="/home/event-horizon/.npm-packages"
+export NPM_PACKAGES="$HOME/.npm-packages"
 export NODE_PATH="$NPM_PACKAGES/lib/node_modules${NODE_PATH:+:$NODE_PATH}"
 export PATH="$NPM_PACKAGES/bin:$PATH"
 unset MANPATH
@@ -25,6 +25,7 @@ export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 alias pys="source env/bin/activate"
 alias pyd="deactivate"
 export PYTHONDONTWRITEBYTECODE=1
+alias virtualenv="python $HOME/.local/lib/python2.7/site-packages/virtualenv.py"
 
 # -- Go setup --
 export PATH="$PATH:/usr/local/go/bin"
