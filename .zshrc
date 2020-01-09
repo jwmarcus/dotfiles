@@ -21,12 +21,30 @@ export NODE_PATH="$NPM_PACKAGES/lib/node_modules${NODE_PATH:+:$NODE_PATH}"
 export PATH="$NPM_PACKAGES/bin:$PATH"
 unset MANPATH
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # -- Python setup --
+export PYTHONDONTWRITEBYTECODE=1
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 alias pys="source env/bin/activate"
 alias pyd="deactivate"
-export PYTHONDONTWRITEBYTECODE=1
-alias virtualenv="python $HOME/.local/lib/python2.7/site-packages/virtualenv.py"
+
+# -- Conda exec setup
+__conda_setup="$('$HOME/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="$HOME/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
 
 # -- Go setup --
 export PATH="$PATH:/usr/local/go/bin"
