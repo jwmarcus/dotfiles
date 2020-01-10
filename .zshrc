@@ -3,7 +3,9 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 plugins=(git docker docker-compose)
 source $ZSH/oh-my-zsh.sh
-compinit
+# For docker-machine autocomplete
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i
 
 # Personal scripts
 export PATH="$PATH:$HOME/dev/bin/scripts"
