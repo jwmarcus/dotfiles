@@ -49,3 +49,12 @@ source "$SDKMAN_DIR/bin/sdkman-init.sh"
 
 # -- Rust Manager --
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# Functions
+dock() {
+  eval $(docker-machine env $1)
+}
+
+undock() {
+  eval $(docker-machine env -u)
+}
