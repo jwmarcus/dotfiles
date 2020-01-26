@@ -32,7 +32,8 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
-alias pys="source env/bin/activate"
+alias pys="source env-dev/bin/activate"
+alias pyp="source env-prod/bin/activate"
 alias pyd="deactivate"
 
 # -- Go setup --
