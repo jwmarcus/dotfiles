@@ -58,9 +58,9 @@ set confirm
 set autoread
 
 " Set tab spacing
-set tabstop=4
-set shiftwidth=4 
-set expandtab     " Tabs turn to spaces
+set tabstop=4     " Width of a tab character
+set shiftwidth=4  " How much to move with > and <
+set expandtab     " Spaces are used instead of tabs
 set smarttab      " Tab out appropriately
 set shiftround    " Round to nearest tab
 
