@@ -51,7 +51,7 @@ source "$SDKMAN_DIR/bin/sdkman-init.sh"
 # -- Rust Manager --
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# Functions
+# Functions for docker-machine
 dock() {
   eval $(docker-machine env $1)
 }
@@ -59,3 +59,12 @@ dock() {
 undock() {
   eval $(docker-machine env -u)
 }
+
+# Personal reminders
+echo "--- Q1 Tidelift Commits: ---"
+echo "1. Understand & represent the prospect's needs"
+echo "2. Provide tech, sales, prod value to smarketing"
+echo ""
+echo "--- Q1 Personal Theme: Be the Sales Hacker"
+echo "------------------------------------------"
+
