@@ -48,6 +48,7 @@ set number
 set history=1000
 " -- Tell `screen` to use darkmode syntax highlights
 set background=dark
+set linebreak     " Wrap lines at the word
 " set visualbell
 
 " Turn on "detection", "plugin" and "indent"
