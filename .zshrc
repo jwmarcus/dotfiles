@@ -8,7 +8,7 @@ fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
 
 # Personal scripts
-export PATH="$PATH:$HOME/dev/bin/scripts"
+export PATH="$PATH:$HOME/bin/scripts"
 
 # Aliases
 alias xclip="xclip -selection c"
