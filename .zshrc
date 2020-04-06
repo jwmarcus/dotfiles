@@ -61,10 +61,10 @@ undock() {
 }
 
 # Personal reminders
-echo "--- Q1 Tidelift Commits: ---"
-echo "1. Understand & represent the prospect's needs"
-echo "2. Provide tech, sales, prod value to smarketing"
+echo "--- Q2 Commits: ---"
+echo "1. Bring sales hacking into ABS to move more to Stage 3" 
+echo "2. Ship (n+1) account profiles manually and automated"
 echo ""
-echo "--- Q1 Personal Theme: Be the Sales Hacker"
+echo "--- Q2 Personal Theme: Mr. Consistent"
 echo "------------------------------------------"
 
