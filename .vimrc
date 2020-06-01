@@ -81,3 +81,10 @@ inoremap <C-v> <ESC>"+pa
 vnoremap <C-c> "+y
 vnoremap <C-d> "+d
 
+" Indent based on file type
+autocmd filetype markdown setlocal shiftwidth=2 softtabstop=2 expandtab
+autocmd filetype html setlocal shiftwidth=2 softtabstop=2 expandtab
+autocmd filetype cs setlocal shiftwidth=2 softtabstop=2 expandtab
+autocmd filetype javascript setlocal shiftwidth=2 softtabstop=2 expandtab
+autocmd filetype yaml setlocal shiftwidth=2 softtabstop=2 expandtab
+
