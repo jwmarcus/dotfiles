@@ -17,12 +17,7 @@ alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y"
 # Tokens
 source $HOME/tokens
 
-# -- Node doesn't need sudo for global packages like yarn --
-export NPM_PACKAGES="$HOME/.npm-packages"
-export NODE_PATH="$NPM_PACKAGES/lib/node_modules${NODE_PATH:+:$NODE_PATH}"
-export PATH="$NPM_PACKAGES/bin:$PATH"
-unset MANPATH
-export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+# -- Node.js setup
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
@@ -31,7 +26,7 @@ export PYTHONDONTWRITEBYTECODE=1
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+
 alias pys="source env-dev/bin/activate"
 alias pyp="source env-prod/bin/activate"
 alias pyd="deactivate"
@@ -50,15 +45,6 @@ source "$SDKMAN_DIR/bin/sdkman-init.sh"
 
 # -- Rust Manager --
 export PATH="$HOME/.cargo/bin:$PATH"
-
-# Functions for docker-machine
-dock() {
-  eval $(docker-machine env $1)
-}
-
-undock() {
-  eval $(docker-machine env -u)
-}
 
 # Personal reminders
 echo "--- Q2 Commits: ---"
