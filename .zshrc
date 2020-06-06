@@ -1,8 +1,22 @@
+# Report latest results
+if test -f "$HOME/logs/mirror.log"; then
+    echo "Last Mirror: " $(date -r $HOME/logs/mirror.log +"%D %I:%M %p") "- $(cat $HOME/logs/mirror.log)"
+fi
+
+if test -f "$HOME/logs/backup.log"; then
+    echo "Last Backup: " $(date -r $HOME/logs/backup.log +"%D %I:%M %p") "- $(cat $HOME/logs/backup.log)"
+fi
+
+if test -f "$HOME/logs/duckdns.log"; then
+    echo "DNS Update:  " $(date -r $HOME/logs/duckdns.log +"%D %I:%M %p") "- $(cat $HOME/logs/duckdns.log)"
+fi
+
 # oh-my-zsh setup
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 plugins=(git docker docker-compose)
 source $ZSH/oh-my-zsh.sh
+
 # For docker-machine autocomplete
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
@@ -45,12 +59,4 @@ source "$SDKMAN_DIR/bin/sdkman-init.sh"
 
 # -- Rust Manager --
 export PATH="$HOME/.cargo/bin:$PATH"
-
-# Personal reminders
-echo "--- Q2 Commits: ---"
-echo "1. Bring sales hacking into ABS to move more to Stage 3" 
-echo "2. Ship (n+1) account profiles manually and automated"
-echo ""
-echo "--- Q2 Personal Theme: Mr. Consistent"
-echo "------------------------------------------"
 
