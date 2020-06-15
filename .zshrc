@@ -57,6 +57,3 @@ eval "$(rbenv init -)"
 export SDKMAN_DIR="$HOME/.sdkman"
 source "$SDKMAN_DIR/bin/sdkman-init.sh"
 
-# -- Rust Manager --
-export PATH="$HOME/.cargo/bin:$PATH"
-
