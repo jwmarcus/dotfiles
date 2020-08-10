@@ -14,7 +14,7 @@ fi
 # oh-my-zsh setup
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
-plugins=(git docker docker-compose)
+plugins=(git docker docker-compose poetry)
 source $ZSH/oh-my-zsh.sh
 
 # For docker-machine autocomplete
@@ -41,9 +41,10 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-alias pys="source env-dev/bin/activate"
+alias pys="source .venv/bin/activate"
 alias pyp="source env-prod/bin/activate"
 alias pyd="deactivate"
+export PATH="$HOME/.poetry/bin:$PATH"
 
 # -- Go setup --
 export PATH="$PATH:/usr/local/go/bin"
