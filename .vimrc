@@ -81,6 +81,9 @@ inoremap <C-v> <ESC>"+pa
 vnoremap <C-c> "+y
 vnoremap <C-d> "+d
 
+" Filetype extension definitions
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+
 " Indent based on file type
 autocmd filetype markdown setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd filetype html setlocal shiftwidth=2 softtabstop=2 expandtab
