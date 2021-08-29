@@ -27,8 +27,9 @@ alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y &
 # Tokens
 source $HOME/tokens
 
-# -- Python setup --
+# Python setup
 export PYTHONDONTWRITEBYTECODE=1
+
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
@@ -37,5 +38,5 @@ alias pys="source .venv/bin/activate"
 alias pyp="source env-prod/bin/activate"
 alias pyd="deactivate"
 
-# -- Multi-platform workarounds
+# Multi-platform workarounds
 cd ~
