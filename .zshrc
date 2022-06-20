@@ -1,16 +1,3 @@
-# Report latest results
-if test -f "$HOME/logs/mirror.log"; then
-    echo "Last Mirror: " $(date -r $HOME/logs/mirror.log +"%D %I:%M %p") "- $(cat $HOME/logs/mirror.log)"
-fi
-
-if test -f "$HOME/logs/backup.log"; then
-    echo "Last Backup: " $(date -r $HOME/logs/backup.log +"%D %I:%M %p") "- $(cat $HOME/logs/backup.log)"
-fi
-
-if test -f "$HOME/logs/duckdns.log"; then
-    echo "DNS Update:  " $(date -r $HOME/logs/duckdns.log +"%D %I:%M %p") "- $(cat $HOME/logs/duckdns.log)"
-fi
-
 # oh-my-zsh setup
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
