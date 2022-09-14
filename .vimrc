@@ -49,3 +49,4 @@ autocmd filetype cs setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd filetype javascript setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd filetype yaml setlocal shiftwidth=2 softtabstop=2 expandtab
 
+set backspace=indent,eol,start

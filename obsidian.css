@@ -1,0 +1,6 @@
+/* Expand the page to fit the full width of the screen */
+
+div:not(.csv-table-wrapper)>.markdown-source-view {
+    border-right-width: 0;
+    border-left-width: 0;
+}
