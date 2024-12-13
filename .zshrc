@@ -7,6 +7,9 @@ source $ZSH/oh-my-zsh.sh
 # Personal scripts
 export PATH="$PATH:$HOME/bin"
 
+# Python modules installed to --user space
+export PATH="$HOME/.local/bin:$PATH" 
+
 # Aliases
 alias xclip="xclip -selection c"
 alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo snap refresh"
@@ -24,6 +27,7 @@ eval "$(pyenv init --path)"
 alias pys="source .venv/bin/activate"
 alias pyp="source env-prod/bin/activate"
 alias pyd="deactivate"
+
 
 # Multi-platform workarounds
 cd ~
